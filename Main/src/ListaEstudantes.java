@@ -6,6 +6,7 @@ public class ListaEstudantes {
      //adicionar estudante./Ordenando nomes
     public void adicionarAluno(Estudante e){
         estudantes.add(e);
+        System.out.println("adicionado com sucesso");
     }
     //remover estudante.
     public void removerAluno(Estudante e ){
@@ -28,5 +29,11 @@ public class ListaEstudantes {
         return estudantes;
     }
 
+    public ArrayList<Estudante> obterAluno(){
+        for(int i=0; i<estudantes.size(); i++){
+            System.out.println(estudantes.get(i));
+        }
+        return estudantes;
+    }
 
 }
