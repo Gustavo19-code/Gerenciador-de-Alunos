@@ -26,6 +26,14 @@ public class cadastroDisciplinas{
        }
        return disciplinas;
     }
+    
+    //funcao para verificar se existe uma disciplina na lista de disciplinas.
+    public boolean verificarDisciplina(Disciplina d ){
+        if(disciplinas.contains(d)){
+            return true;
+        }
+        return false;
+    }
 
     
 
