@@ -1,15 +1,17 @@
 public class matricula{
-    private boolean nota;
-
-    public boolean isNota() {
+    private double nota;
+    //getters e setters da classe
+    public double getNota() {
         return nota;
     }
 
-    public void setNota(boolean nota) {
+    public void setNota(double nota) {
         this.nota = nota;
     }
 
-    public matricula(boolean nota){
+    //constrututor estudante
+    public matricula(double nota, Disciplina disciplina){
         this.nota=nota;
+        disciplina.getCodigo();
     }
 }
