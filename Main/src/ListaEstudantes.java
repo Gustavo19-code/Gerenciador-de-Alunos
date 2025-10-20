@@ -1,9 +1,9 @@
-import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedList;
 public class ListaEstudantes {
-  ArrayList<Estudante>estudantes= new ArrayList<>();
+  LinkedList<Estudante>estudantes= new LinkedList<>();
 
-  public ListaEstudantes(ArrayList<Estudante> estudantes){
+  public ListaEstudantes(LinkedList<Estudante> estudantes){
     this.estudantes=estudantes;
   }
 
@@ -33,13 +33,13 @@ public class ListaEstudantes {
         return null;
     }
     //ordenar alunos por ordem alfabetica.
-    public ArrayList<Estudante> ordenacao(){
+    public LinkedList<Estudante> ordenacao(){
         estudantes.sort(Comparator.comparing(Estudante::getNome));//função sort serve para comparar duas Strings e ordenar em ordem alfabetica.
         return estudantes;
     }
      
     //obter os dados de um aluno pelo ID.
-    public ArrayList<Estudante> obterAluno(){
+    public LinkedList<Estudante> obterAluno(){
         for(int i=0; i<estudantes.size(); i++){
             System.out.println(estudantes.get(i));
         }
