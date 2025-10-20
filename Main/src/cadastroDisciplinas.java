@@ -1,9 +1,10 @@
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 
 public class cadastroDisciplinas{
-    private LinkedHashSet<Disciplina> disciplinas= new LinkedHashSet<>();
+    private HashSet<Disciplina> disciplinas= new LinkedHashSet<>();
 
-    public cadastroDisciplinas(LinkedHashSet<Disciplina> disciplina){
+    public cadastroDisciplinas(HashSet<Disciplina> disciplina){
         this.disciplinas= disciplina;
     }
 
@@ -20,7 +21,7 @@ public class cadastroDisciplinas{
         }
     }
 
-    public LinkedHashSet<Disciplina> obterDisciplinas(){
+    public HashSet<Disciplina> obterDisciplinas(){
        for(Disciplina d: disciplinas){
         System.out.println(" "+d);
        }
