@@ -1,16 +1,18 @@
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 
 public class cadastroDisciplinas{
-    private HashSet<Disciplina> disciplinas= new LinkedHashSet<>();
-
-    public cadastroDisciplinas(HashSet<Disciplina> disciplina){
-        this.disciplinas= disciplina;
+    private LinkedHashSet<Disciplina> disciplinas= new LinkedHashSet<>();
+    private LinkedHashSet<Disciplina> duplicadas= new LinkedHashSet<>();
+    
+    //construtor
+    public cadastroDisciplinas(){
+        this.disciplinas= new LinkedHashSet<>();
     }
 
     public void adicionarDisciplina(Disciplina d ){
-        if(disciplinas.contains(d)){
+        if(!disciplinas.add(d)){
             System.out.println("nao e possivel adicionar o aluno,pois ele ja existe no sistema");
+            duplicadas.add(d);
         }
         disciplinas.add(d);
     }
@@ -21,7 +23,7 @@ public class cadastroDisciplinas{
         }
     }
 
-    public HashSet<Disciplina> obterDisciplinas(){
+    public LinkedHashSet<Disciplina> obterDisciplinas(){
        for(Disciplina d: disciplinas){
         System.out.println(" "+d);
        }
@@ -34,6 +36,12 @@ public class cadastroDisciplinas{
             return true;
         }
         return false;
+    }
+
+
+    //funcao para obter as duplicatas das materias.
+    public LinkedHashSet<Disciplina> obterDuplicatas(){
+        return duplicadas;
     }
 
     

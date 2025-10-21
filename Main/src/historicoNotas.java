@@ -89,7 +89,11 @@ public class historicoNotas {
         }
 
         // 1. Calcula a média para cada estudante
-        Map<Integer, Double> mediasPorEstudante = matriculas.keySet().stream().collect(Collectors.toMap(id -> id,this.mediaDoEstudante ));
+        Map<Integer, Double> mediasPorEstudante = matriculas.keySet().stream()
+        .collect(Collectors.toMap(
+            id -> id,
+            id->mediaEstudante(id)
+            ));
 
         // 2. Ordena os IDs dos estudantes por suas médias em ordem decrescente
         return mediasPorEstudante.entrySet().stream()

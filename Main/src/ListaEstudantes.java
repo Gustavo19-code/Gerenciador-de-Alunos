@@ -1,10 +1,11 @@
 import java.util.Comparator;
 import java.util.LinkedList;
 public class ListaEstudantes {
-  LinkedList<Estudante>estudantes= new LinkedList<>();
-
-  public ListaEstudantes(LinkedList<Estudante> estudantes){
-    this.estudantes=estudantes;
+  private LinkedList<Estudante>estudantes= new LinkedList<>();
+   
+  //construtor
+  public ListaEstudantes(){
+    this.estudantes=new LinkedList<>();
   }
 
      //adicionar estudante./Ordenando nomes
